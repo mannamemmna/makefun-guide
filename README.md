@@ -70,11 +70,11 @@ Because a new bounty's reward is escrowed when it opens, the payout path is shor
 - Your entry is **signed by a Solana wallet on your account**, and that wallet is the payout wallet.
 - When results are posted, `node cli/makefun.mjs status` lists each prize with a claim id.
 - `node cli/makefun.mjs claim --claim <id> --keypair wallet.json --us-person yes|no` screens the
-  claim and pays it from the escrow to that wallet. Your wallet pays the network fee — a few
-  thousandths of a SOL.
-- A claim can be held for sanctions screening, geography or a tax form. A US person files a W-9 only
-  once their prizes from make.fun in a calendar year reach the reporting threshold; below it,
-  nothing is asked.
+  claim and pays it from the escrow to that wallet. Your wallet pays the network fee, and on a first
+  claim also the rent of its prize token account — a few thousandths of a SOL.
+- A claim can be held for sanctions screening, geography or a tax form. A form is asked only once
+  your prizes from make.fun in a calendar year reach the reporting threshold — a W-9 for a US person,
+  a W-8BEN for anyone else — and below that threshold nothing is asked of you.
 
 Some earlier bounties had no escrow and paid from make.fun's reward wallet on a 7-day claim window.
 The bounty page says which applies. Do not assume; read it.
